@@ -1,0 +1,20 @@
+{
+	"net_bin": "./models/hook_wlxd_exp17.bin",
+	"net_param": "./models/hook_wlxd_exp17.param",
+	"hook_weight_double": 2.2,    //2.2
+	"is_save_img": {
+		"is_save": 1,
+		"interval": 60      //1500表示为1分钟
+	},
+	"label": "crooked",
+    //平滑参数，连续多少次报警才发送报警
+	"smoothing_factor": 4,
+	//当偏移超过某个个像素点个数则表示为异常检测点
+	"abnormal_detect_threadshold": 150,
+    //图像压缩比例
+	"img_ratio": 0.3,
+	"standard_k": 0.086,
+	"standard_b": 558,
+   //图像发送前端间隔多少帧
+	"send_interval": 30     //450   send_interval必须要大于smoothing_factor
+}
